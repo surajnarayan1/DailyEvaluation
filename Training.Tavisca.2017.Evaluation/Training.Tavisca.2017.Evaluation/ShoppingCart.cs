@@ -18,18 +18,24 @@ namespace Training.Tavisca._2017.Evaluation
         {
            PizzaList.Add(Extravangua);
         }
-        public void ShowTheCart()
+        public void ShowTheCart( string name)
         {
 
-            foreach (Pizza e in PizzaList)
-            {
-
-            }
+          
 
         }
-        public void GetDetail()
+        public Pizza GetDetailOfPizza(string name)
         {
-
+            foreach (Pizza pizza in PizzaList)
+            {
+                if (pizza.Name == name)
+                {
+                    return pizza;
+                }
+                
+                    return null;
+            }
+            return null;
         }
 
     }
